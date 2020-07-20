@@ -1,9 +1,12 @@
 package com.gemasoftware.springjwtmysql.models;
 
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
 @Table(name = "user-roles")
 public class Role {
     @Id
@@ -16,23 +19,4 @@ public class Role {
 
     public Role(){}
 
-    public Role(UserRole userRoleName){
-        this.userRoleName = userRoleName;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public UserRole getUserRoleName() {
-        return userRoleName;
-    }
-
-    public void setUserRoleName(UserRole userRoleName) {
-        this.userRoleName = userRoleName;
-    }
 }
